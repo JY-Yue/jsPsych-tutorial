@@ -1,6 +1,6 @@
 const jsPsych = initJsPsych({
-    on_finish: function () {
-        jsPsych.data.displayData('csv');
+    on_finish: function(data) {
+        proliferate.submit({"trials": data.values()});
     }
 });
 let timeline = [];
